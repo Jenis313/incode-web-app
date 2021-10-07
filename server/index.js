@@ -10,6 +10,9 @@ const emailRouter = require('./routes/api/email.routes')
 const app = express()
 const PORT = process.env.PORT || 5000
 
+// Database
+require('./db-init')
+
 // Middleware
 app.use(morgan('dev'))
 app.use(cors())
