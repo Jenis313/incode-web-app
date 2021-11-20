@@ -1,3 +1,4 @@
+// This refers to syllabus of the design
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const ContentSchema = new Schema({
@@ -5,9 +6,6 @@ const ContentSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Course'
     },
-    // week: {
-    //     type: Number
-    // },
     contentTitle: {
         type: String
     },

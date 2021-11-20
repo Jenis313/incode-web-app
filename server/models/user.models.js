@@ -32,7 +32,8 @@ const userSchema = new Schema({
     },
     darkTheme: {
         type: Boolean,
-        required: true
+        required: true,
+        default: false
     },
     role: {
         type: Number,

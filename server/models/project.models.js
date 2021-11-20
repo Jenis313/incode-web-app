@@ -4,18 +4,22 @@ const projectSchema = new Schema({
     course: {
         type: String
     },
-    projectTitle: {
+    title: {
         type: String
     },
-    projectDescription: {
+    description: {
         type: String
     },
-    projectNumber: {
+    number: {
         type: Number
     },
-    projectLink: {
+    link: {
         type: String
+    },
+    dueDate: {
+        type: Number
     }
+
 }, {
     timestamps: true
 })

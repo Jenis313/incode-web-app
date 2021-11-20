@@ -2,6 +2,9 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
 const CohortSchema = new Schema({
+    name: {
+        type: 'String' //Incode-6 etc.
+    },
     course:{
         type: Schema.Types.ObjectId,
         ref: 'Course'
@@ -16,7 +19,7 @@ const CohortSchema = new Schema({
     },
     recordings: [{
         type: Schema.Types.ObjectId,
-        ref: 'Link'
+        ref: 'Recording'
     }],
     days: [
         {
@@ -40,10 +43,6 @@ const CohortSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'User'
     },
-    // roll: {
-    //     type: Schema.Types.ObjectId,
-    //     ref: 'Roll'
-    // },
     submissions: [
         {
             type: Schema.Types.ObjectId,

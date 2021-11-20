@@ -14,7 +14,7 @@ const SubSchema = new Schema({
         ref: 'Cohort'
     },
     link: {
-        type: String, //github link
+        type: String, //github link etc.
         required: true
     },
     project: {
@@ -27,8 +27,13 @@ const SubSchema = new Schema({
     },
     group: [
         {
-            type: Schema.Types.ObjectId,
-            ref: 'User'
+            number : Number,
+            users: [
+                {
+                    type: Schema.Types.ObjectId,
+                    ref: 'User'
+                }
+            ]
         }
     ]
 }, {
